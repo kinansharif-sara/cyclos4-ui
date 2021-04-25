@@ -157,6 +157,8 @@
   },
   "login": {
     "title": "Connexion",
+    "userName":"Nom d'utilisateur",
+    "usernamePlaceHolder":"veuillez entrer un utilisateur valide",
     "message": "Vous pouvez vous connecter avec votre identifiant et votre mot de passe.",
     "disconnected": "Vous avez été déconnecté.<br>Veuillez vous identifier à nouveau pour afficher la page demandée.",
     "principal": "Utilisateur",

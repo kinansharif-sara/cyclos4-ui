@@ -25,6 +25,7 @@ export class PageContentComponent implements OnInit, OnChanges {
   @Input() mobileHeading: string;
   @Input() headingActions: HeadingAction[];
   @Input() layout: 'normal' | 'centered' = 'normal';
+  @Input() flexDirection: 'flex-row' | 'flex-column' | '' = '';
   @HostBinding('attr.mode') @Input() mode: CardMode = 'normal';
 
   shortcutsSub: Subscription;

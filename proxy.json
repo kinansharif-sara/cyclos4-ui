@@ -1,7 +1,7 @@
 {
   "/api": {
-    "target": "http://localhost:8888",
-    "cookieDomainRewrite": "localhost",
+    "target": "https://sara.kdkash.com",
+    "cookieDomainRewrite": "kdkash.com",
     "secure": false,
     "changeOrigin": true
   }

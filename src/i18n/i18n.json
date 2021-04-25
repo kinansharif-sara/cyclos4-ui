@@ -329,6 +329,8 @@
     "principal": "User",
     "forgotPassword": "Forgot your password?",
     "register": "Not a user yet? Register here.",
+    "userName":"UserName",
+    "usernamePlaceHolder":"Please Enter A Valid User",
     "confirmation.text": "You have successfully logged-in, but your session must to be confirmed in order to proceed.",
     "error": {
       "invalid": "Sign in failed. The given user / password are incorrect. Please, try again.",

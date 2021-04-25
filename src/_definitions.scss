@@ -1,7 +1,7 @@
 @import 'styles/custom-definitions';
 
-// Base colors
-$primary: #2795c4 !default;
+// Base colors#2795c4
+$primary: #1A237E  !default;
 $accent: #2795c4 !default;
 $primary-dark: #133f52 !default;
 $accent-dark: #2795c4 !default;
@@ -268,7 +268,7 @@ $input-plaintext-color: $body-color !default;
 $required-marker-color: $red !default;
 $list-group-hover-color: $input-color !default;
 $list-group-hover-bg: $menu-bar-inactive-hover-bg !default;
-$button-color: $accent !default;
+$button-color: $primary !default;
 $button-border-color: $button-color !default;
 $button-icon-color: $gray-700 !default;
 $button-icon-bg: $gray-100 !default;

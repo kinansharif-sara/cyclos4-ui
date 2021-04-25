@@ -28,6 +28,7 @@ export class ActionButtonComponent extends BaseComponent implements OnChanges {
   }
 
   @Input() disabled: boolean;
+  @Input() btnClass: string;
   @Input() label: string;
   @Input() icon: SvgIcon | string;
   @Output() action = new EventEmitter<any>();
