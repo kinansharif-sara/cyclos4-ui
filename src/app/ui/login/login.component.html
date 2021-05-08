@@ -22,23 +22,24 @@
   
         <div class="principal">
           <div class="form-group text-left">
-            <label for="principal">{{i18n.login.principal}}</label>
+         
             <input #principal type="text" formControlName="principal"
-              autocomplete="username" class="form-control" focused
+              autocomplete="username" class="form-control input-grey" focused
               [placeholder]="i18n.login.usernamePlaceHolder"
               (keyup.enter)="password.focus()" [ngClass]="{
               'is-invalid': (form.get('principal').statusChanges | async) === 'INVALID' && form.get('principal').touched
             }">
+            <field-errors [control]="form.get('principal')"></field-errors>
           </div>
           
             
           
-          <field-errors [control]="form.get('principal')"></field-errors>
+          
         </div>
 
         <div class="form-group text-left">
-          <label for="principal">{{data.accessPasswordType.name}}</label>
-          <password-input #password class="d-block login-margin-bottom"
+          
+          <password-input #password class="d-block login-margin-bottom input-grey"
           formControlName="password" autocomplete="password"
           [passwordInput]="data.loginPasswordInput"
           (keyup.enter)="submit.click()"

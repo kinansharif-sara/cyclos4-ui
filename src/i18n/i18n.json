@@ -321,6 +321,7 @@
   },
   "login": {
     "title": "Login",
+    "haveAccount":"have an account?",
     "mobileTitle": "Login",
     "title.confirmation": "Login confirmation",
     "mobileTitle.confirmation": "Login confirmation",

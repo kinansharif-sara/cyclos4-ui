@@ -43,6 +43,16 @@ button:focus {
     outline-width: 0
 }
 
+.input-grey{
+    background: #f5f5f5  !important;
+  color: rgb(134, 122, 122)  !important;
+  border: none  !important;
+  outline: none  !important;
+  box-shadow: none  !important;
+  letter-spacing: 1px !important;  
+  font-weight: 300  !important;
+}
+
 .border-line {
     border-right: 1px solid #EEEEEE
 }

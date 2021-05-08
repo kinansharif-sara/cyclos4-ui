@@ -157,6 +157,7 @@
   },
   "login": {
     "title": "Connexion",
+    "haveAccount":"avoir un nom d'utilisateur?",
     "userName":"Nom d'utilisateur",
     "usernamePlaceHolder":"veuillez entrer un utilisateur valide",
     "message": "Vous pouvez vous connecter avec votre identifiant et votre mot de passe.",
