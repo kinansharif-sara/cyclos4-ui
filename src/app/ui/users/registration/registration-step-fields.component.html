@@ -29,15 +29,23 @@
   <h2 class="mt-4">{{ i18n.user.title.fields }}</h2>
 </ng-container>
 
-<!-- Basic profile fields-->
+<div class="row">
+<div class="col-4" style="background-color: #1A237E;">
+
+  <h3 class="text-white">Information</h3>
+  <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, nisi?</p>
+  <button class="btn btn-warning">have an account?</button>
+</div>
+  <div class="col-8">
+    <!-- Basic profile fields-->
 <ng-container [formGroup]="form">
   <label-value *ngIf="data.broker" [label]="i18n.user.broker">
     <user-link [user]="data.broker" hideLink></user-link>
   </label-value>
   <input-field *ngIf="canEdit('name')" formControlName="name"
-    [label]="i18n.user.name" required></input-field>
+    [placeholder]="i18n.user.name" required></input-field>
   <input-field *ngIf="canEdit('username')" formControlName="username"
-    [label]="i18n.user.username" required></input-field>
+    [placeholder]="i18n.user.username" required></input-field>
   <ng-container *ngIf="canEdit('email')">
     <label-value [label]="i18n.user.email" kind="field"
       [ignoreExtraCell]="!canManagePrivacy('email')"
@@ -70,30 +78,29 @@
 </ng-container>
 
 <!-- Mobile phone -->
-<label-value *ngIf="mobileAvailability !== 'disabled'"
-  [label]="i18n.phone.mobile" [required]="mobileAvailability === 'required'"
-  kind="field" [formGroup]="mobileForm">
+<ng-container *ngIf="mobileAvailability !== 'disabled'"
+  [formGroup]="mobileForm">
   <input-field formControlName="number"
-    [placeholder]="data.phoneConfiguration.mobileExample"></input-field>
+    [placeholder]="i18n.phone.mobile+' '+data.phoneConfiguration.mobileExample"></input-field>
   <field-privacy *extraCell [control]="mobileForm.get('hidden')">
   </field-privacy>
-</label-value>
+</ng-container>
 
 <!-- Land-line phone -->
 <ng-container *ngIf="landLineAvailability !== 'disabled'"
   [formGroup]="landLineForm">
-  <label-value [label]="i18n.phone.landLine"
-    [required]="data.phoneConfiguration.landLineAvailability === 'required'"
-    kind="field">
+  
     <input-field formControlName="number"
-      [placeholder]="data.phoneConfiguration.landLineExample"></input-field>
+      [placeholder]="i18n.phone.landLine+' '+data.phoneConfiguration.landLineExample"></input-field>
     <field-privacy *extraCell [control]="landLineForm.get('hidden')">
     </field-privacy>
-  </label-value>
+
   <input-field *ngIf="data.phoneConfiguration.extensionEnabled"
     formControlName="extension" fieldSize="tiny"
-    [label]="i18n.phone.extension"></input-field>
+    [placeholder]="i18n.phone.extension"></input-field>
 </ng-container>
+  </div>
+</div>
 
 <!-- Address -->
 <ng-container *ngIf="addressAvailability !== 'disabled'">

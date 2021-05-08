@@ -136,5 +136,14 @@ export class RegistrationStepFieldsComponent
     this.locatingAddress$.next(false);
     this.changeDetector.detectChanges();
   }
+  ngAfterViewInit() {
+  
+    setTimeout(()=>{
+      (<any>document.getElementById('id_1')).value='kinan'+ Math.random();
+  (<any>document.getElementById('id_2')).value='kinan'+ Math.random();
+  (<any>document.getElementById('id_3')).value='+224 601 12 34 56';
+  (<any>document.getElementById('id_4')).value='+224 30 24 12 34';
+    },1000);
+  }
 
 }
